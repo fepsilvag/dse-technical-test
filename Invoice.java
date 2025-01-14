@@ -12,7 +12,6 @@ import java.util.Objects;
 @AllArgsConstructor
 public class Invoice {
 
-    private Long invoiceId;
     private String accessKey;
     private Long invoiceNumber;
     private LocalDate issueDate;
