@@ -20,7 +20,18 @@ O sistema salva os dados da planta modificada.
 - O usuário logado preenche as novas informações
 - O usuário logado pode solicitar a gravação das novas informações
 - O sistema realiza as validações necessárias para seguir com a alteração
-  - O sistema valida que a descrição é alfanumérica e não possui mais de 10 caracteres
-    - Caso esteja inválido deve retornar uma mensagem ao usuário informando a seguinte mensagem: "A descrição está incorreta, favor informar uma descrição de até 10 caracteres alfanuméricos"
+  - Descrição
+    - Caso contenha algum caractere não alfanumérico deverá retornar o erro "A descrição é um campo alfanumérico, favor inserir uma descrição válida"
+    - Caso contenha mais de 10 caracteres alfanuméricos deverá retornar o erro "A descrição só pode ter até 10 caracteres alfanuméricos, favor informar uma descrição menor"
 - Se a validação passar, a planta é salva no sistema
 - O sistema retorna a informação que a planta foi salva com sucesso
+
+## Cenários de Teste de Sucesso:
+1. Tentar acessar essa funcionalidade com um usuário comum e um usuário administrador
+2. Tentar alterar o valor do campo código da planta, não deve ser possível por que o campo deve ser não editável
+5. Tentar alterar o valor do campo descrição, apagando todo o conteúdo e salvando, o sistema deve salvar a alteração corretamente
+6. Tentar alterar o valor do campo descrição, preenchendo com um texto alfanumérico com menos de 10 caracteres (exemplo: desc) e salvando, o sistema deve salvar a alteração corretamente
+
+## Cenários de Teste de Erro:
+3. Tentar alterar o valor do campo descrição colocando caracteres especiais (exemplo: @@$!%) deverá retornar o erro "A descrição é um campo alfanumérico, favor inserir uma descrição válida"
+4. Tentar alterar o valor do campo descrição colocando mais de 10 caracteres alfanuméricos, deverá retornar o erro "A descrição só pode ter até 10 caracteres alfanuméricos, favor informar uma descrição menor"
