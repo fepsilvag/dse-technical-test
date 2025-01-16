@@ -24,12 +24,14 @@ O sistema salva os dados da planta cadastrada.
 - Se a validação passar, a nova planta é criada no sistema.
 - O sistema retorna a informação que a planta foi salva com sucesso
 
-## Cenários de Teste:
+## Cenários de Teste de Sucesso:
 1. Tentar acessar essa funcionalidade com um usuário comum e um usuário administrador
-2. Tentar cadastrar uma planta com letras no código (exemplo: aast1) deverá retornar o erro "O código da planta é apenas númerico, favor inserir código válido"
-3. Tentar cadastrar uma planta com caracteres especiais no código (exemplo: @@$!%) deverá retornar o erro "O código da planta é apenas númerico, favor inserir código válido"
-4. Tentar cadastrar uma planta com um código duplicado deverá retornar o erro "O código da planta está duplicado, favor inserir um novo código"
-5. Tentar cadastrar uma planta com caracteres especiais na descrição (exemplo: @@$!%) deverá retornar o erro "A descrição é um campo alfanumérico, favor inserir uma descrição válida"
-6. Tentar cadastrar uma planta com caracteres especiais na descrição com mais de 10 caracteres alfanuméricos, deverá retornar o erro "A descrição só pode ter até 10 caracteres alfanuméricos, favor informar uma descrição menor"
-7. Tentar cadastrar uma planta com código numérico (exmeplo: 1) único e sem preencher a descrição, o sistema deve cadastrar corretamente
-8. Tentar cadastrar uma planta com código numérico (exmeplo: 2) único e preencher a descrição com um texto alfanumérico com menos de 10 caracteres (exemplo: desc), o sistema deve cadastrar corretamente
+2. Tentar cadastrar uma planta com código numérico (exmeplo: 1) único e sem preencher a descrição, o sistema deve cadastrar corretamente
+3. Tentar cadastrar uma planta com código numérico (exmeplo: 2) único e preencher a descrição com um texto alfanumérico com menos de 10 caracteres (exemplo: desc), o sistema deve cadastrar corretamente
+
+## Cenários de Teste de Erro:
+1. Tentar cadastrar uma planta com letras no código (exemplo: aast1) deverá retornar o erro "O código da planta é apenas númerico, favor inserir código válido"
+2. Tentar cadastrar uma planta com caracteres especiais no código (exemplo: @@$!%) deverá retornar o erro "O código da planta é apenas númerico, favor inserir código válido"
+3. Tentar cadastrar uma planta com um código duplicado deverá retornar o erro "O código da planta está duplicado, favor inserir um novo código"
+4. Tentar cadastrar uma planta com caracteres especiais na descrição (exemplo: @@$!%) deverá retornar o erro "A descrição é um campo alfanumérico, favor inserir uma descrição válida"
+5. Tentar cadastrar uma planta com a descrição com mais de 10 caracteres alfanuméricos (exempplo: aaaaaaaaaaaaaaaaaaaaaaaaaaa), deverá retornar o erro "A descrição só pode ter até 10 caracteres alfanuméricos, favor informar uma descrição menor"
