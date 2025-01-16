@@ -22,3 +22,10 @@ O sistema lista todas as plantas cadastradas.
   - Caso o usuário preencha o filtro de descrição, o sistema irá realizar uma busca case-insensitive de descrições que contenham o conjunto caracteres solicitados
 - O sistema irá exibir em uma lista abaixo todos os resultados encontrados
 - O sistema deverá remover o demonstrativo de "carregando".
+
+## Cenários de Teste de Sucesso:
+1. Tentar acessar essa funcionalidade com um usuário comum e um usuário administrador
+2. Realizar o cadastro de uma planta e em seguida verificar se aparece na listagem (sem filtros)
+3. Realizar o cadastro de uma planta e em seguida verificar se aparece na listagem filtrando pelo código da planta cadastrada anteriormente
+4. Realizar o cadastro de uma planta com a descrição TESTE e em seguida verificar se aparece na listagem filtrando pela descrição tes
+5. Realizar o cadastro de uma planta com a descrição TESTE e em seguida verificar se aparece na listagem filtrando pelo código cadastrado anteriormente e pela descrição tes
