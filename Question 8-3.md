@@ -29,9 +29,9 @@ O sistema salva os dados da planta modificada.
 ## Cenários de Teste de Sucesso:
 1. Tentar acessar essa funcionalidade com um usuário comum e um usuário administrador
 2. Tentar alterar o valor do campo código da planta, não deve ser possível por que o campo deve ser não editável
-5. Tentar alterar o valor do campo descrição, apagando todo o conteúdo e salvando, o sistema deve salvar a alteração corretamente
-6. Tentar alterar o valor do campo descrição, preenchendo com um texto alfanumérico com menos de 10 caracteres (exemplo: desc) e salvando, o sistema deve salvar a alteração corretamente
+3. Tentar alterar o valor do campo descrição, apagando todo o conteúdo e salvando, o sistema deve salvar a alteração corretamente
+4. Tentar alterar o valor do campo descrição, preenchendo com um texto alfanumérico com menos de 10 caracteres (exemplo: desc) e salvando, o sistema deve salvar a alteração corretamente
 
 ## Cenários de Teste de Erro:
-3. Tentar alterar o valor do campo descrição colocando caracteres especiais (exemplo: @@$!%) deverá retornar o erro "A descrição é um campo alfanumérico, favor inserir uma descrição válida"
-4. Tentar alterar o valor do campo descrição colocando mais de 10 caracteres alfanuméricos, deverá retornar o erro "A descrição só pode ter até 10 caracteres alfanuméricos, favor informar uma descrição menor"
+1. Tentar alterar o valor do campo descrição colocando caracteres especiais (exemplo: @@$!%) deverá retornar o erro "A descrição é um campo alfanumérico, favor inserir uma descrição válida"
+2. Tentar alterar o valor do campo descrição colocando mais de 10 caracteres alfanuméricos, deverá retornar o erro "A descrição só pode ter até 10 caracteres alfanuméricos, favor informar uma descrição menor"
